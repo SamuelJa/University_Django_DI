@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Profile of {{ blogger.first_name }}</title>
+</head>
+<body>
+
+  <h1>Note De L'Eleve</h1>
+  <table class="table">
+  <thead>
+      <tbody>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">Nom</th>
+          <th scope="col"> Date De Naissance</th>
+        </tr>
+      </tbody>
+    <tbody>
+          <tr>
+            <th> {{student.id}}</th>
+            <th scope="row">{{student.nom}}</th>
+            <td>  {{student.prenom }} </td>
+            <td>  {{student.date }} </td>
+
+          </tr>
+    </tbody>
+        <tbody>
+          <tr>
+            <th scope="col">ID#</th>
+            <th scope="col">Matiere</th>
+            <th scope="col">Note</th>
+            <th scope="col"> Coefficient</th>
+          </tr>
+        </tbody>
+        <tbody>
+          {% for notes in note %}
+          <tr>
+            <td scope="row">{{notes.id}}</td>
+            <td>{{notes.matiere}}</td>
+            <td>  {{notes.note }} </td>
+            <td>  {{notes.coefficient }} </td>
+          </tr>
+          {% endfor %}
+        </tbody
+          
+   
+
+  </thead>
